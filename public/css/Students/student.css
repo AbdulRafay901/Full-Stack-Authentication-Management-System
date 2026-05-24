@@ -1,0 +1,353 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+#loading {
+    position: fixed;
+    inset: 0;
+    background-color: #435D7D; /* your theme */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader-box {
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255,255,255,0.3);
+    border-top: 5px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F4F4;
+}
+
+.container{
+    width: 1050px;
+    
+}
+
+.container .column1{
+    background-color: #435D7D;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .column1 .h1 h1{
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    font-size: 27px;
+}
+.container .column1 .buttons{
+    display: flex;
+    gap: 10px;
+}
+.container .column1 .buttons button a{
+    color: white;
+    text-decoration: none;
+}
+.container .column1 .buttons button:nth-child(1){
+    background-color: transparent;
+    border: none;
+    background-color: #DC3545;
+    color: white;
+    width: 85px;
+    height: 33px;
+}
+.container .column1 .buttons button i{
+    font-size: 15px;
+}
+
+.container .column1 .buttons button:nth-child(2){
+    background-color: #28A745;
+    border: none;
+    color: white;
+    width: 160px;
+    height: 33px;
+}
+.container .column1 .buttons button:nth-child(1):hover{
+    background-color: #dc1327;
+    transition: 0.3s ease;
+}
+.container .column1 .buttons button:nth-child(2):hover{
+    background-color: #20953b;
+    transition: 0.3s ease;
+}
+.container .column2{
+    background-color: white;
+    padding: 15px 25px;
+}
+.container .column2  .details{
+    display: flex;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: #e1e1e1;
+    padding: 15px 0 15px 0;
+}
+.container .column2  .users .Name p{
+    font-size: 13px !important; 
+}
+
+.container .column2 .details .checkbox{
+    width: 40px;
+}
+.container .column2 .details .checkbox input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+}
+.container .column2  .details .Name:nth-child(2){
+    width: 180px;
+}
+.container .column2  .details .Name:nth-child(3){
+    width: 250px;
+}
+.container .column2  .details .Name:nth-child(4){
+    width: 300px;
+}
+.container .column2  .details .Name:nth-child(5){
+    width: 160px;
+}
+.container .column2  .details .Name:nth-child(6){
+    width: 50px;
+}
+.container .column2  .details .Name p{
+    font-family: 'Varela round', sans-serif;
+    font-size: 14px;
+}
+.container .column2 .users .action{
+    display: flex;
+    justify-content: space-between;
+}
+.container .column2 .users .action a{
+    text-decoration: none;
+}
+.container .column2 .users .action i:nth-child(1){
+    color: #FFC71F;
+    font-size: 21px;
+}
+.container .column2 .users .action i:nth-child(2){
+    color: #F55549;
+    font-size: 20px;
+}
+.addUser-container{
+    width: 600px;
+}
+.addUser-container .column2{
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.container .column2 .input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container .column2 .input input{
+    border-style: solid;
+    border-color: rgb(198, 196, 196);
+    outline: none;
+    padding: 10px;
+}
+.addUser-container .column2 .button button{
+   background-color: #435D7D;
+   color: white;
+   border: none;
+   width: 100px;
+   height: 35px;
+   font-family: 'Varela Round', sans-serif;
+   font-size: 14.5px;
+}
+.addUser-container .column2 .button button:hover{
+    border-color: #435D7D;
+    border-style: solid;
+    border-width: 1px;
+    background-color: transparent;
+    color: #435D7D;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.error,
+.success{
+    background-color: #2f3336;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-family: 'Varela Round',sans-serif;
+    border-radius: 5px;
+    width: 500px;
+    font-size: 14px;
+    position: fixed;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%);
+    transition: 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.error-js,
+.success-js{
+    top: 10%;
+    opacity: 1;
+    visibility: visible;
+}
+.success{
+    width: auto;
+    background-color: #bfe0c7;
+    color: #155724;
+}
+
+.pagination{
+    display: flex;
+    margin: 40px 0px;
+    padding: 10px 20px;
+    background-color: white;
+    width: 110px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.pagination .arrow{
+    background-color: transparent;
+    border: none;
+    color: #435D7D;
+    font-size: 15px;
+    cursor: pointer;
+}
+.pagination #numbers button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.otp{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 60px 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    row-gap: 20px;
+}
+.otp .inputs{
+    display: flex;
+    gap: 5px;
+}
+.otp .inputs input{
+    width: 30px;
+    height: 30px;
+    outline: none;
+    text-align: center;
+}
+.otp button{
+    width: 75%;
+    height: 35px;
+    background-color: #435D7D;
+    border: none;
+    color: white;
+    font-size: 17px;
+    font-family: 'Varela Round', sans-serif;
+}
+.otp .resendCode{
+    color: #435D7D;
+    font-weight: 600;
+    background-color: transparent;
+    font-size: 13px;
+    cursor: pointer;
+}
+.input-js{
+    border-color: red;
+}
+.LoginUser-container{
+  width: 500px;   
+}
+.LoginUser-container .column2{
+    padding: 40px 25px;
+}
+.p-l{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.p-l .logout{
+    text-decoration: none;
+    background-color: #435D7D;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    padding: 10px 30px;
+    font-size: 14px;
+    transition: 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+.p-l .logout:hover{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #435D7D;
+    background-color: transparent;
+    color: #435D7D;
+}
+
+#login .create button{
+    width: 100%;
+    background-color: transparent;
+    color: #435D7D;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+    border-color: #435D7D;
+    text-decoration: none;
+    transition: 0.3s;
+    font-family: 'Varela Round', sans-serif;
+    cursor: pointer;
+}
+#login .create button:hover{
+    background-color: #435D7D;
+    color: white;
+}
+#login button{
+    width: 100%;
+}
+.LoginUser-container .forgetPassword{
+    text-align: center;
+    margin-top: -15px;
+}
+.LoginUser-container .forgetPassword button{
+    color: #435D7D;
+    font-family: 'Varela Round', sans-serif;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    background-color: transparent;
+}
