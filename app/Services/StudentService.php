@@ -15,13 +15,19 @@ use Illuminate\Support\Str;
 
 
 class StudentService{
+
+// Ye strip_tags isliye use hota he agar user front-end se koi Script
+// Send kardete jese <script>alert()</script>
+// To strip_tags isko simple text me convert krke save krdeta he aese alert
+// Mltb ye XSS preventionse attack se bachane ke liye hota he
+
     
 public function create($Name,$Email,$Address,$Phone){
     $insert = new Student();
-    $insert->Name = $Name;
-    $insert->Email = $Email;
-    $insert->Address = $Address;
-    $insert->Phone = $Phone;
+    $insert->Name = strip_tags($Name);
+    $insert->Email = strip_tags($Email);
+    $insert->Address = strip_tags($Address);
+    $insert->Phone = strip_tags($Phone);
     $insert->save();
     return $Name;
 }
@@ -45,10 +51,10 @@ public function Edit($id){
 
 public function Update($id,$Name, $Email, $Address, $Phone ){
       return Student::Where("id", $id)->update([
-        "Name" => $Name,
-        "Email" => $Email,
-        "Address"=> $Address,
-        "Phone" => $Phone
+        "Name" => strip_tags($Name),
+        "Email" => strip_tags($Email),
+        "Address"=> strip_tags($Address),
+        "Phone" => strip_tags($Phone)
     ]);
 }
 
@@ -68,8 +74,8 @@ $code = rand(100000,999999);
     $msg = "This is Your Code ". $code;
 
     $insert = User::create([
-        "name" => $Name,
-        "email" => $Email,
+        "name" => strip_tags($Name),
+        "email" => strip_tags($Email),
         "password" => Hash::make($Password),
         "verification_code" => $code,
         "verification_code_expires_at" => now()->addMinutes(10)
@@ -201,4 +207,4 @@ function changePassword($token, $Password){
 
 }
 
-?>
+?>  

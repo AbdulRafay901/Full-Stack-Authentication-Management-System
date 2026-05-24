@@ -16,9 +16,12 @@ class ApiController extends Controller
     }
 
     function store(studentRequest $request){
-     $data = $this->StudentService->create(
-            $request->Name,$request->Email,$request->Address,$request->Phone
-      );
+         $data = $this->StudentService->create(
+                 $request->Name
+                ,$request->Email
+                ,$request->Address
+                ,$request->Phone
+         );
 
         return response()->json(["Name" => $data]);
     }
