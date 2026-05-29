@@ -200,7 +200,6 @@ Authenticated users cannot access login/register pages unless they logout.
 - Pagination
 - Role-Based Controls
 
-> > > > > > > ec3a7e8317b2b0bc54c4d9a6f548fe2d9b8167b5
 
 ---
 
