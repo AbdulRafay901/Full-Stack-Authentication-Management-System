@@ -33,7 +33,7 @@ public function create($Name,$Email,$Address,$Phone){
 }
 
 public function read(){
-    return Student::paginate(2);
+    return Student::paginate(5);
 }
 
 public function delete($id){

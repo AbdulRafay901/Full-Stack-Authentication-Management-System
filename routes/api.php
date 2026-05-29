@@ -20,7 +20,7 @@ Route::post('changePassword', [AuthController::class, 'changePassword']);
 
 Route::middleware(['auth:sanctum', 'role:admin'])->group(function(){
      Route::apiResource('students', ApiController::class)
-        ->only(['store', 'update', 'destroy']);
+        ->only(['store', 'update', 'destroy', 'show']);
 
      Route::delete('students/Checkbox',[ApiController::class, 'checkbox']);   
 });

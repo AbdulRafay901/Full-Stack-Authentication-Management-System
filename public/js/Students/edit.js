@@ -56,6 +56,7 @@ function getCookie(name) {
         const path = window.location.pathname;
 
         let id = path.split('/')[2].split('=')[1];
+
          
      try {
 
@@ -69,7 +70,7 @@ function getCookie(name) {
         {
             method: "GET",
             credentials: 'include',
-            headers: {'Content-Type': 'application/json',
+            headers: {'Content-Type': 'application/json', 'Accept': 'application/json',
                 "X-XSRF-TOKEN": csrfToken
             },
         })
@@ -87,7 +88,7 @@ function getCookie(name) {
 
         document.querySelector("#lolo").addEventListener("submit", async (e) => {
 
-            e.preventDefault()
+        e.preventDefault()
 
     let id = document.querySelector("#id").value;
     let Name = document.querySelector("#Name").value;
@@ -149,7 +150,6 @@ function getCookie(name) {
     }   
         })
 
-        
      } catch (error) {
         console.log(error);
      }   

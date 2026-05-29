@@ -43,9 +43,9 @@ class ApiController extends Controller
         return response()->json(["user" => $user]);
     }
 
-    function update(studentRequest $request, $student){
+    function update(studentRequest $request, $id){
      $msg = $this->StudentService->Update(
-            $student,
+            $id,
             $request->Name,
             $request->Email,
             $request->Address,

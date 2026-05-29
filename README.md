@@ -175,10 +175,10 @@ Authenticated users cannot access login/register pages unless they logout.
 | POST   | /api/logout         | Logout User              |
 | POST   | /api/forgotPassword | Forgot Password          |
 | POST   | /api/changePassword | Change Password          |
-| GET    | /api/users          | Fetch Users              |
-| POST   | /api/users          | Create User              |
-| PUT    | /api/users/{id}     | Update User              |
-| DELETE | /api/users/{id}     | Delete User              |
+| GET    | /api/students       | Fetch Users              |
+| POST   | /api/students       | Create User              |
+| PUT    | /api/students/{id}  | Update User              |
+| DELETE | /api/students/{id}  | Delete User              |
 
 ---
 
@@ -198,10 +198,8 @@ Authenticated users cannot access login/register pages unless they logout.
 - Pagination
 - Role-Based Controls
 
-> Add your project screenshots inside a `/screenshots` folder and update image paths here.
-
 ```md
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](images/dashboard.png)
 ```
 
 ---
@@ -211,7 +209,7 @@ Authenticated users cannot access login/register pages unless they logout.
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/AbdulRafay901/laravel-restapi-spa-dashboard.git
 ```
 
 ---
