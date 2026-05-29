@@ -198,9 +198,7 @@ Authenticated users cannot access login/register pages unless they logout.
 - Pagination
 - Role-Based Controls
 
-```md
 ![Dashboard](public/images/dashboard.png)
-```
 
 ---
 
