@@ -270,26 +270,23 @@ php artisan serve
 
 # 🔥 Key Highlights
 
-✅ Laravel REST API Architecture
-✅ SPA-Style Frontend Rendering
-✅ Sanctum Cookie Authentication
-✅ Role & Permission Management
-✅ Queue & Event System
-✅ Service Layer Architecture
-✅ Form Request Validation
-✅ Protected Routes & Middleware
-✅ CRUD + Bulk Delete + Pagination
-✅ Dynamic Client-Side Rendering
+- ✅ Laravel REST API Architecture
+- ✅ SPA-Style Frontend Rendering
+- ✅ Sanctum Cookie Authentication
+- ✅ Role & Permission Management
+- ✅ Queue & Event System
+- ✅ Service Layer Architecture
+- ✅ Form Request Validation
+- ✅ Protected Routes & Middleware
+- ✅ CRUD + Bulk Delete + Pagination
+- ✅ Dynamic Client-Side Rendering
 
 ---
 
 # 🌐 Future Improvements
 
-- Search & Filtering
-- Real-Time Notifications
-- Profile Management
-- Dark Mode
-- API Documentation using Swagger
+- Search
+- Responsive
 
 ---
 
